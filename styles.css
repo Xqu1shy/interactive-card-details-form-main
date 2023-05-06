@@ -1,0 +1,297 @@
+/* font-family: 'Space Grotesk', sans-serif; */
+
+:root {
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --input-border: linear-gradient(90deg, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    width: 90%;
+    padding: 4em 0;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 700px;
+    }
+}
+
+/* layout */
+
+                                                /* back-card */
+
+.card-container {
+    background: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-card-container {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.back-card img {
+    width: 100%;
+}
+
+.back-card-container p {
+    position: absolute;
+    width: 80%;
+    top: 39%;
+    left: 10.5%;
+    padding: 0.5em;
+}
+
+/* typo */
+
+.back-card-container p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.7rem, 3.5vw, 1.1rem);
+    color: var(--white);
+    text-align: end;
+}
+
+                                /* front-card */
+
+.front-card-container {
+    position: absolute;
+    width: 80%;
+    max-width: 400px;
+    top: 60%;
+    left: 5%;
+}
+
+.logo {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    width: 20%;
+}
+
+#card-num {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    font-size: clamp(0.5rem, 5vw, 2rem);
+}
+
+#card-name {
+    position: absolute;
+    width: 70%;
+    bottom: 15%;
+    left: 5%;
+
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    letter-spacing: 0.1em;
+}
+
+#exp-date {
+    position: absolute;
+    width: 15%;
+    bottom: 15%;
+    left: 80%;
+
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
+    letter-spacing: 0.1em;
+}
+
+                                            /* form layout */
+
+
+.form-container {
+    padding: 10% 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+input {
+    border: 2px solid var(--light-grayish-violet);
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    padding: 1em;
+}
+
+#form-cname,
+#form-cnum {
+    width: 100%;
+}
+
+.date-cvc-container {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.date-cvc-container input {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+input:focus,
+textarea:focus {
+    outline-color: hsl(249, 100%, 73%);
+}
+
+.date,
+.cvc {
+    width: 50vw;
+}
+
+#btn1 {
+    background-color: var(--very-dark-violet);
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+/* typo */
+
+.form-container > * {
+    text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.5rem, 6vw, 1.1rem);
+    color: var(--very-dark-violet);
+}
+
+.form-container p {
+    text-transform: capitalize;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.5rem, 3vw, 0.8rem);
+    color: var(--red);
+}
+
+
+input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.5rem, 6vw, 1rem);
+    color: var(--dark-grayish-violet);
+}
+
+.date-cvc-container label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.5rem, 4vw, 1.1rem);
+    color: var(--very-dark-violet);
+}
+
+#btn1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.5rem, 6vw, 1.1rem);
+    color: var(--white);
+}
+
+
+/* breakpoit desktop */
+
+@media (min-width: 1184px) {
+
+    main {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .card-container {
+        background: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 35%;
+    }
+
+    .card-section {
+        position: static;
+    }
+
+
+    .back-card-container {
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        top: 53%;
+        left: 12vw;
+        transition: 0.1s all ease;
+    }
+
+    .front-card-container {
+        position: absolute;
+        width: 100%;
+        max-width: 400px;
+        top: 25%;
+        left: 12vw;
+    }
+
+    .form-section {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 7em 0 auto;
+    }
+}
+
+@media (min-width: 1276px) {
+    .back-card-container {
+        left: 20vw;
+        transition: 0.1s all ease;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .back-card-container {
+        left: 24vw;
+    }
+
+    .front-card-container {
+        left: 18vw;
+    }
+
+    .form-section {
+        margin: 0 15em 0 auto;
+    }
+
+}
