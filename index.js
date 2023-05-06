@@ -4,6 +4,8 @@ const cNum = document.getElementById('form-cnum');
 const expDate = document.getElementById('form-exp-date');
 const cvc = document.getElementById('form-cvc');
 
+const thanksPage = document.getElementById('thanks-page');
+
 // VALIDATE AND SUBMIT
 
 form.addEventListener('submit', (e) => {
@@ -13,6 +15,16 @@ form.addEventListener('submit', (e) => {
     // to submit the form
     if (successful.length === 4) {
         form.submit();
+        // stop refreshing so I can change the DOM
+        thanksPage.innerHTML = 
+        `<div class="wrapper form-section">
+            <div class="thanks-page">
+                <img src="./images/icon-complete.svg" alt="">
+                <h1>Thank you!</h1>
+                <p>We've added your card details</p>
+                <button>Continue</button>
+            </div>
+        </div>`
     }
 })
 
